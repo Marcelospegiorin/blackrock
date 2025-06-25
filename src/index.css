@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #1B1611;
+  --foreground: #FBF4E3;
+  --muted: hsl(35, 15%, 15%);
+  --muted-foreground: hsl(42, 73%, 85%);
+  --popover: #1B1611;
+  --popover-foreground: #FBF4E3;
+  --card: hsl(35, 20%, 12%);
+  --card-foreground: #FBF4E3;
+  --border: #FBF4E3;
+  --input: hsl(35, 20%, 12%);
+  --primary: #FBF4E3;
+  --primary-foreground: #1B1611;
+  --secondary: hsl(35, 20%, 12%);
+  --secondary-foreground: #FBF4E3;
+  --accent: hsl(35, 20%, 12%);
+  --accent-foreground: #FBF4E3;
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: #FBF4E3;
+  --ring: #FBF4E3;
+  --radius: 0.5rem;
+  --light: #FBF4E3;
+  --dark: #1B1611;
+  --charcoal: hsl(35, 20%, 12%);
+}
+
+.dark {
+  --background: #1B1611;
+  --foreground: #FBF4E3;
+  --muted: hsl(35, 15%, 15%);
+  --muted-foreground: hsl(42, 73%, 85%);
+  --popover: #1B1611;
+  --popover-foreground: #FBF4E3;
+  --card: hsl(35, 20%, 12%);
+  --card-foreground: #FBF4E3;
+  --border: #FBF4E3;
+  --input: hsl(35, 20%, 12%);
+  --primary: #FBF4E3;
+  --primary-foreground: #1B1611;
+  --secondary: hsl(35, 20%, 12%);
+  --secondary-foreground: #FBF4E3;
+  --accent: hsl(35, 20%, 12%);
+  --accent-foreground: #FBF4E3;
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: #FBF4E3;
+  --ring: #FBF4E3;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Custom styles for barbershop theme */
+.font-bebas {
+  font-family: 'Bebas Neue', cursive;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.gradient-overlay {
+  background: linear-gradient(45deg, rgba(27,22,17,0.8), rgba(251,244,227,0.3));
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(251, 244, 227, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes pulse-light {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(251, 244, 227, 0.5); 
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(251, 244, 227, 0.8); 
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-light {
+  animation: pulse-light 2s ease-in-out infinite;
+}
+
+/* Mobile menu animations */
+.menu-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open {
+  transform: rotate(90deg);
+}
+
+.max-h-0 {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.max-h-80 {
+  max-height: 20rem;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
