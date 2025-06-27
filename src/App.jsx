@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from 'react-router-dom';
 
 // IMAGES
 import barbeirosBG from './assets/victorewarley.jpg'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -142,8 +144,9 @@ export default function App() {
               BLACK ROCK
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="hover:text-gold text-shadow transition-colors duration-300">Home</a>
+              <a href="#home" className="hover:text-gold text-shadow transition-colors duration-300">Início</a>
               <a href="#about" className="hover:text-gold text-shadow transition-colors duration-300">Sobre</a>
+              <Link to="/cursos" className="hover:text-gold text-shadow transition-colors duration-300">Curso</Link>
               <a href="#services" className="hover:text-gold text-shadow transition-colors duration-300">Serviços</a>
               <a href="#gallery" className="hover:text-gold text-shadow transition-colors duration-300">Galeria</a>
               <a href="#contact" className="hover:text-gold text-shadow transition-colors duration-300">Contato</a>
@@ -168,6 +171,7 @@ export default function App() {
             }`}>
             <a href="#home" className="block hover:text-light transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>Home</a>
             <a href="#about" className="block hover:text-light transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>Sobre</a>
+            <Link to="/cursos" className="block hover:text-light transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>Curso</Link>
             <a href="#services" className="block hover:text-light transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>Serviços</a>
             <a href="#gallery" className="block hover:text-light transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>Galeria</a>
             <a href="#contact" className="block hover:text-light transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>Contato</a>
